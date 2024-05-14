@@ -1,0 +1,18 @@
+h1 {
+    color: #fafafa;
+    margin: 0px 0px 8px;
+}
+span {
+    color: #01d277;
+    font-size: 20.8px;
+    font-family:sans-serif;
+}
+
+p {
+    color: #fafafa;
+    font-size: 16px;
+}
+
+.Text {
+    padding: 20px;
+}

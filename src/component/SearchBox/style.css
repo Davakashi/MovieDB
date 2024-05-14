@@ -1,0 +1,15 @@
+input {
+    padding: 8px 12px;
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border if needed */
+    outline: none; 
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    height: 36px;
+    line-height: 1.25;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #fff;
+}
