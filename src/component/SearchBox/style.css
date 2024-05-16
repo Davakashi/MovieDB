@@ -1,15 +1,74 @@
-input {
-    padding: 8px 12px;
-    background-color: transparent; /* Make the background transparent */
-    border: none; /* Remove border if needed */
-    outline: none; 
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    height: 36px;
-    line-height: 1.25;
-    font-size: 1rem;
+:root {
+    --input-padding: 8px 12px;
+    --input-color: #fff;
+    --input-background: transparent;
+    --input-border-color: #fff;
+    --input-font-size: 1rem;
+    --input-height: 36px;
+    --input-line-height: 1.25;
+    --dropdown-background-color: rgba(0, 0, 0, 0.9);
+    --dropdown-hover-background-color: rgba(255, 255, 255, 0.2);
+    --dropdown-border-color: var(--input-border-color);
 }
 
-input::placeholder {
-    color: #fff;
+.search-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%; /* Ensure the container is responsive */
+    margin: auto; /* Center the container horizontally */
+    width: 300px; /* Set a fixed width or max-width as needed */
+}
+
+.search-input {
+    padding: var(--input-padding);
+    background-color: var(--input-background); /* Transparent background */
+    border: none; /* Remove default border */
+    outline: none;
+    color: var(--input-color); /* Text color */
+    border-bottom: 1px solid var(--input-border-color); /* Bottom border */
+    height: var(--input-height); /* Fixed height */
+    line-height: var(--input-line-height); /* Line height */
+    font-size: var(--input-font-size); /* Font size */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.search-input::placeholder {
+    color: var(--input-color); /* Placeholder color */
+    opacity: 0.8; /* Slightly less opaque */
+}
+
+.search-input:focus {
+    border-bottom-color: var(--input-border-color); /* Border color on focus */ /* Slight background change on focus */
+}
+
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid var(--dropdown-border-color); */
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: var(--dropdown-background-color); /* Darker background for suggestions */
+    position: absolute;
+    width: 100%;
+    z-index: 1000; /* Ensure the dropdown is above other elements */
+    top: 100%; /* Position the dropdown below the input */
+    left: 0; /* Align the dropdown with the left edge of the input */
+    box-sizing: border-box; /* Include border in width calculation */
+}
+
+.suggestion-item {
+    padding: var(--input-padding);
+    cursor: pointer;
+    color: var(--input-color);
+}
+
+.suggestion-item:hover {
+    background-color: #01d277; /* Slight background change on hover */
+    color: #333;
+    font-weight: bold;
 }

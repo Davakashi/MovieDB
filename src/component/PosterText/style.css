@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
 h1 {
     color: #fafafa;
     margin: 0px 0px 8px;
+    font-family: 'Lato', sans-serif;
 }
 span {
     color: #01d277;
     font-size: 20.8px;
-    font-family:sans-serif;
+    font-family:'Oswald', sans-serif;
 }
 
 p {
     color: #fafafa;
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
 }
 
 .Text {

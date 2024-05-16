@@ -2,11 +2,11 @@ import React from "react";
 import { Detail } from "../Detail";
 import "./style.css"
 
-export const PosterText = () => {
+export const PosterText = (props) => {
     return <div className="Text">
-        <h1>LEON</h1>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, esse.</span>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum iste vitae iure iusto, doloremque esse praesentium nobis reiciendis omnis nesciunt excepturi vel ad at sapiente similique, in assumenda autem, rem placeat? Ad neque, pariatur itaque explicabo officia facere unde. Repellendus!</p>
-        <Detail/>
+        <h1>{props.title}</h1>
+        <span>{props.tagline}</span>        
+        <p>{props.overview}</p>
+        <Detail relDate={props.relDate} voteAvg= {props.voteAvg} runtime = {props.runtime} revenue={props.revenue} prod={props.prod} genres={props.genres} />
     </div>
 }

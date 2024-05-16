@@ -1,11 +1,11 @@
 import React from "react";
-import Poster from "../../leon2.jpg"
 import "./style.css"
 
-export const PosterImg = () => {
+export const PosterImg = (props) => {
     return (
         <div>
-            <img className="PosterImg" src={Poster} alt="poster" />
+            <img className="PosterImg" src={`https://image.tmdb.org/t/p/w500${props.img}`} alt="poster" />
         </div>
+        
     )
 }
