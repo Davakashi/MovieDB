@@ -5,7 +5,6 @@ import { Poster } from "./component/Poster";
 import Logo from "./tmdb.svg";
 
 function App() {
-    const [selectedMovie, setSelectedMovie] = useState(null);
     const [movieData, setMovieData] = useState(null);
 
     // Function to fetch movie data by ID
@@ -26,7 +25,6 @@ function App() {
 
     // Function to receive selected movie data
     const handleMovieSelect = (movie) => {
-        setSelectedMovie(movie);
         fetchMovieData(movie.id);
     };
 
@@ -121,7 +119,7 @@ function App() {
                     <SearchBox onMovieSelect={handleMovieSelect} />
                 </div>
                 <Poster
-                    genres={data.genres.map((genre) => genre.name).join(", ")}
+                    genres={data.genres.map((genre) => genre.name).join(",")}
                     productions={data.production_companies
                         .map((company) => company.name)
                         .join(", ")}

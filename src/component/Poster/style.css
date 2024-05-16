@@ -3,6 +3,6 @@
     display: grid;
     grid-template-columns: 40% 60%;
     box-sizing: border-box;
-    height: 520px;
+    height: 480px;
     border-radius: 5px;
 }
