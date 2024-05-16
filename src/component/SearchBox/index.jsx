@@ -37,7 +37,7 @@ export const SearchBox = ({ onMovieSelect }) => {
     const handleSuggestionClick = (suggestion) => {
         setSearchTerm(""); // Clear the input field after selecting a suggestion
         onMovieSelect(suggestion);
-        console.log(suggestion.id) // Pass selected movie to parent component
+        // Pass selected movie to parent component
     };
 
     return (
